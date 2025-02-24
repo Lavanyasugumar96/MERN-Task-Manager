@@ -28,10 +28,10 @@ class TaskService {
 
 module.exports = TaskService;
 
-const TaskServiceInstance = new TaskService();
-console.log(
-  TaskServiceInstance.find,
-  TaskServiceInstance.create,
-  TaskServiceInstance.update,
-  TaskServiceInstance.delete
-);
+// const TaskServiceInstance = new TaskService();
+// console.log(
+//   TaskServiceInstance.find,
+//   TaskServiceInstance.create,
+//   TaskServiceInstance.update,
+//   TaskServiceInstance.delete
+// );

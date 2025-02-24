@@ -1,14 +1,14 @@
 
-const taskModel = require("./models/task.model");
-
-
-const TaskService = require("./services/task.service");
-const taskRoutes = require("./routes/task.routes");
-
-
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+
+
+const taskModel = require("./models/task.model");
+
+
+const TaskService = require("./services/task.service")
+const taskRoutes = require("./routes/task.routes");
 
 const app = express();
 const PORT = 8082;
@@ -25,6 +25,9 @@ mongoose.connect(DB_URI, {
 
 app.use(cors());
 app.use(express.json());
+
+
+app.use("/tasks", taskRoutes);
 
 
 app.listen(PORT,()=>{
